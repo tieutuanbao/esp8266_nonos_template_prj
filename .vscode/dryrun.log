@@ -1,45 +1,17 @@
-make.exe --dry-run --keep-going --print-directory
-make: Entering directory '/f/1.projects/1.phao_hoa_esp8266/220415/nonos/esp8266_template_project'
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/f/2.documents/esp/8266/esp8266_nonos_template_prj'
 mkdir -p build/obj/
 mkdir -p build/bin/
 mkdir -p build/out/
 C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -Os -g -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals -ffunction-sections -fdata-sections -fno-builtin-printf -DICACHE_FLASH -DSPI_FLASH_SIZE_MAP=4 -DMEM_DEFAULT_USE_DRAM -DLWIP_OPEN_SRC -DMEMLEAK_DEBUG -IESP8266_NONOS_SDK/include -IESP8266_NONOS_SDK/driver_lib/include -IESP8266_NONOS_SDK/third_party/include -IESP8266_NONOS_SDK/third_party/include/lwip -IESP8266_NONOS_SDK/third_party/include/lwip/app -I./source -I./mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/include -I./mcu_libs_BitsCat/misc -o build/obj/rf_init.o -c source/rf_init.c
 echo "Build project done!"
- 
 mkdir -p build/obj/
 mkdir -p build/bin/
 mkdir -p build/out/
 C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -Os -g -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals -ffunction-sections -fdata-sections -fno-builtin-printf -DICACHE_FLASH -DSPI_FLASH_SIZE_MAP=4 -DMEM_DEFAULT_USE_DRAM -DLWIP_OPEN_SRC -DMEMLEAK_DEBUG -IESP8266_NONOS_SDK/include -IESP8266_NONOS_SDK/driver_lib/include -IESP8266_NONOS_SDK/third_party/include -IESP8266_NONOS_SDK/third_party/include/lwip -IESP8266_NONOS_SDK/third_party/include/lwip/app -I./source -I./mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/include -I./mcu_libs_BitsCat/misc -o build/obj/main.o -c source/main.c
 echo "Build project done!"
+make: Leaving directory '/f/2.documents/esp/8266/esp8266_nonos_template_prj'
  
-mkdir -p build/obj/
-mkdir -p build/bin/
-mkdir -p build/out/
- 
-C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -Os -g -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals -ffunction-sections -fdata-sections -fno-builtin-printf -DICACHE_FLASH -DSPI_FLASH_SIZE_MAP=4 -DMEM_DEFAULT_USE_DRAM -DLWIP_OPEN_SRC -DMEMLEAK_DEBUG -IESP8266_NONOS_SDK/include -IESP8266_NONOS_SDK/driver_lib/include -IESP8266_NONOS_SDK/third_party/include -IESP8266_NONOS_SDK/third_party/include/lwip -IESP8266_NONOS_SDK/third_party/include/lwip/app -I./source -I./mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/include -I./mcu_libs_BitsCat/misc -o build/obj/esp8266_gpio.o -c mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.c
-echo "Build project done!"
- 
-mkdir -p build/obj/
-mkdir -p build/bin/
-mkdir -p build/out/
-C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -Os -g -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals -ffunction-sections -fdata-sections -fno-builtin-printf -DICACHE_FLASH -DSPI_FLASH_SIZE_MAP=4 -DMEM_DEFAULT_USE_DRAM -DLWIP_OPEN_SRC -DMEMLEAK_DEBUG -IESP8266_NONOS_SDK/include -IESP8266_NONOS_SDK/driver_lib/include -IESP8266_NONOS_SDK/third_party/include -IESP8266_NONOS_SDK/third_party/include/lwip -IESP8266_NONOS_SDK/third_party/include/lwip/app -I./source -I./mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/include -I./mcu_libs_BitsCat/misc -o build/obj/esp8266_i2s.o -c mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_i2s.c
- 
-echo "Build project done!"
- 
-C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar ru build/out/template_project.a 
-C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -LESP8266_NONOS_SDK/lib -Tld/eagle.app.v6.4M.ld -nostdlib -Wl,--no-check-sections -Wl,--gc-sections -u call_user_start -Wl,-static -Wl,--start-group -lc -lgcc -lhal -lphy -lpp -lnet80211 -llwip -lwpa -lcrypto -lmain -ljson -lssl -lupgrade -lsmartconfig -lairkiss build/out/template_project.a -Wl,--end-group -o build/out/template_project.out
-echo ".bin to .out!"
-C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-objcopy --only-section .text -O binary build/out/template_project.out eagle.app.v6.text.bin
-C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-objcopy --only-section .data -O binary build/out/template_project.out eagle.app.v6.data.bin
-C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-objcopy --only-section .rodata -O binary build/out/template_project.out eagle.app.v6.rodata.bin
-C:/Espressif/xtensa-lx106-elf/bin/xtensa-lx106-elf-objcopy --only-section .irom0.text -O binary build/out/template_project.out eagle.app.v6.irom0text.bin
-tools/gen_appbin build/out/template_project.out 0 0 15 4 0
- 
-mv eagle.app.* build/bin/
-mv build/bin/eagle.app.flash.bin build/bin/template_project0x00000.bin
-mv build/bin/eagle.app.v6.irom0text.bin build/bin/template_project0x10000.bin
-echo "Generate template_project*.bin successully in folder build/bin/."
-echo "build/bin/template_project0x00000.bin ------------> 0x00000"
-echo "build/bin/template_project0x10000.bin ------------> 0x10000"
-make: Leaving directory '/f/1.projects/1.phao_hoa_esp8266/220415/nonos/esp8266_template_project'
- 
+make: *** No rule to make target 'mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.c', needed by 'mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.o'.
+make: *** No rule to make target 'mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_i2s.c', needed by 'mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_i2s.o'.
+

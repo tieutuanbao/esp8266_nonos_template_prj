@@ -23,7 +23,6 @@ FLASHDEF	:= --flash_freq 80m --flash_mode qio --flash_size 32m
 SRCS		:= source/rf_init.c
 SRCS		+= source/main.c
 SRCS		+= mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.c
-SRCS		+= mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_i2s.c
 
 INC			:= $(SDK_BASE)include
 INC			+= $(SDK_BASE)driver_lib/include
@@ -138,9 +137,7 @@ unbrick:
 
 # Get file:line exception from address
 addr2line:
-	@cd $(OUT_DIR)
-	@cp $(APP_NAME).out a.out
-	@$(ADDR2LINE) -a $(ADDR)
+	@$(ADDR2LINE) $(OUT_DIR)$(APP_NAME).out -a $(ADDR)
 	@cd ../../
 
 # Không cần quan tâm

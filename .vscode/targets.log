@@ -5,14 +5,14 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Mon May 30 17:18:32 2022
+# Make data base, printed on Mon May 30 17:38:59 2022
 
 # Variables
 
 # environment
 SYSTEMDRIVE = C:
+ 
 # makefile (from 'Makefile', line 19)
 FLASH_BAUD := 921600
 # environment
@@ -24,9 +24,9 @@ USERPROFILE = C:\Users\Admin
 # environment
 LOCALAPPDATA = C:\Users\Admin\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-d073455a-a353-476f-a939-40419bee9001-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6133470f-b07c-4324-9f4d-36188e8102fd-sock
 # environment
-VSCODE_CWD = F:\1.projects\1.phao_hoa_esp8266\220415\nonos\esp8266_template_project
+VSCODE_CWD = F:\2.documents\esp\8266\esp8266_nonos_template_prj
 # environment
 SYSTEMROOT = C:\WINDOWS
 # environment
@@ -70,11 +70,11 @@ SDK_LIBS := -LESP8266_NONOS_SDK/lib -Tld/eagle.app.v6.4M.ld -nostdlib -Wl,--no-c
 # environment
 ONEDRIVE = C:\Users\Admin\OneDrive
 # makefile
-CURDIR := /f/1.projects/1.phao_hoa_esp8266/220415/nonos/esp8266_template_project
+CURDIR := /f/2.documents/esp/8266/esp8266_nonos_template_prj
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # makefile (from 'Makefile', line 26)
 SRCS := source/rf_init.c source/main.c mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.c mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_i2s.c
 # automatic
@@ -125,6 +125,7 @@ HOMEPATH = \Users\Admin
 PLATFORMIO_CALLER = vscode
 # default
 MAKECMDGOALS := all
+ 
 # environment
 DRIVERDATA = C:\Windows\System32\Drivers\DriverData
 # environment
@@ -159,7 +160,6 @@ VSCODE_LOG_NATIVE = false
 USERNAME = Admin
 # environment
 COMMONPROGRAMFILES = C:\Program Files\Common Files
- 
 # makefile (from 'Makefile', line 42)
 DEFINE := ICACHE_FLASH SPI_FLASH_SIZE_MAP=4 MEM_DEFAULT_USE_DRAM LWIP_OPEN_SRC MEMLEAK_DEBUG
 # automatic
@@ -185,7 +185,7 @@ GNUMAKEFLAGS :=
 # environment
 OS = Windows_NT
 # environment
-PLATFORMIO_PATH = C:\Users\Admin\.platformio\penv\Scripts;C:\Users\Admin\.platformio\penv;C:\Users\Admin\.platformio\python3;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\php;C:\composer;C:\Program Files\Git\cmd;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Nmap;C:\WINDOWS\system32\;C:\Program Files\SDCC\bin;C:\Program Files\CMake\bin;C:\Users\Admin\.dotnet\tools;C:\Users\Admin\AppData\Roaming\Composer\vendor\bin;C:\msys64\mingw64\bin;C:\msys64\usr\bin;;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\php;C:\composer;C:\Program Files\Git\cmd;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Nmap;C:\WINDOWS\system32\;C:\Program Files\SDCC\bin;C:\Program Files\CMake\bin;C:\Users\Admin\.dotnet\tools;C:\Users\Admin\AppData\Roaming\Composer\vendor\bin;C:\msys64\mingw64\bin;C:\msys64\usr\bin;
+PLATFORMIO_PATH = C:\Users\Admin\.platformio\python3;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\php;C:\composer;C:\Program Files\Git\cmd;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Nmap;C:\WINDOWS\system32\;C:\Program Files\SDCC\bin;C:\Program Files\CMake\bin;C:\Users\Admin\.dotnet\tools;C:\Users\Admin\AppData\Roaming\Composer\vendor\bin;C:\msys64\mingw64\bin;C:\msys64\usr\bin;;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\php;C:\composer;C:\Program Files\Git\cmd;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Nmap;C:\WINDOWS\system32\;C:\Program Files\SDCC\bin;C:\Program Files\CMake\bin;C:\Users\Admin\.dotnet\tools;C:\Users\Admin\AppData\Roaming\Composer\vendor\bin;C:\msys64\mingw64\bin;C:\msys64\usr\bin;
 # makefile
 .DEFAULT_GOAL := all
 # makefile (from 'Makefile', line 18)
@@ -203,7 +203,7 @@ NUMBER_OF_PROCESSORS = 12
 # environment
 PUBLIC = C:\Users\Public
 # environment
-!F: = f:\1.projects\1.phao_hoa_esp8266\220415\nonos\esp8266_template_project
+!F: = f:\2.documents\esp\8266\esp8266_nonos_template_prj
 # makefile (from 'Makefile', line 45)
 OBJS_DIR := build/obj/
 # environment
@@ -267,11 +267,10 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 
 # Directories
 
-# . (device 1177227544, inode 3940649673958352): 17 files, no impossibilities.
- 
-# source (device 1177227544, inode 844424930153762): No files, no impossibilities so far.
+# . (device 1177227544, inode 36310271995683911): 16 files, no impossibilities.
+# source (device 1177227544, inode 2251799813696992): No files, no impossibilities so far.
 
-# 17 files, no impossibilities in 2 directories.
+# 16 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -311,7 +310,7 @@ mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_i2s.c:
 # Not a target:
 source/rf_init.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-30 16:48:44.389384
+#  Last modified 2022-05-30 17:38:52.347243
 #  File has been updated.
 #  Successfully updated.
 
@@ -339,7 +338,7 @@ mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_i2s.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-30 17:18:21.9553785
+#  Last modified 2022-05-30 17:38:52.3159924
 #  File has been updated.
 #  Successfully updated.
 
@@ -359,7 +358,6 @@ flash:
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
- 
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 118):
@@ -439,9 +437,9 @@ template_project.bin: template_project.out
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
- 
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/11=0%
+ 
 #  recipe to execute (from 'Makefile', line 83):
 	@echo ".bin to .out!"
 	$(OBJCOPY) --only-section .text -O binary $(OUT_DIR)$< eagle.app.v6.text.bin
@@ -486,12 +484,12 @@ template_project.a: source/rf_init.o source/main.o mcu_libs_BitsCat/arch/tensili
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 646 B / avg = 16 B
-# current buf: size = 8162 B / used = 646 B / count = 40 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 632 B / avg = 16 B
+# current buf: size = 8162 B / used = 632 B / count = 39 / avg = 16 B
 
-# strcache performance: lookups = 64 / hit rate = 37%
+# strcache performance: lookups = 63 / hit rate = 38%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=1/64=2%
-# Finished Make data base on Mon May 30 17:18:32 2022
+# Load=39/8192=0%, Rehash=0, Collisions=1/63=2%
+# Finished Make data base on Mon May 30 17:38:59 2022
 
  
