@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:/Espressif/xtensa-lx106-elf/**",
+                "${workspaceFolder}/ESP8266_NONOS_SDK/**",
+                "${workspaceFolder}/source/**",
+                "${workspaceFolder}/mcu_libs_BitsCat\\arch\\tensilica/**",
+                "${workspaceFolder}/mcu_libs_BitsCat\\device/**",
+                "${workspaceFolder}/mcu_libs_BitsCat/misc"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "ICACHE_FLASH",
+                "SPI_FLASH_SIZE_MAP=4",
+                "MEM_DEFAULT_USE_DRAM",
+                "LWIP_OPEN_SRC"
+            ],
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
