@@ -6,8 +6,8 @@ https://www.msys2.org/
 # 3 - Clone Example Project:
 https://github.com/tieutuanbao/esp8266_example_project.git
 # 4 - Chạy các lệnh sau:
-$ cd esp8266_example_project
-$ git clone https://github.com/espressif/ESP8266_NONOS_SDK.git
+-$ cd esp8266_example_project
+-$ git clone https://github.com/espressif/ESP8266_NONOS_SDK.git
 # 5 - Cấu hình các thông số cần thiết trong makefile:
 
 # 6 - Compile và Nạp:
