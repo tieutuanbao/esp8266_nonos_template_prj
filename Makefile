@@ -14,6 +14,9 @@ AR			:= $(XTENSA_DIR)xtensa-lx106-elf-ar
 OBJCOPY		:= $(XTENSA_DIR)xtensa-lx106-elf-objcopy
 ADDR2LINE	:= $(XTENSA_DIR)xtensa-lx106-elf-addr2line
 
+# Cấu hình cổng com
+SERIAL_BAUD	:= 115200
+
 # Cấu hình cổng nạp
 FLASH_PORT	:= COM4
 FLASH_BAUD	:= 921600
@@ -135,10 +138,9 @@ unbrick:
 	0x3FE000 $(SDK_BASE)bin/blank.bin \
 	0x07E000 $(SDK_BASE)bin/blank.bin
 
-# Get file:line exception from address
-addr2line:
-	@$(ADDR2LINE) $(OUT_DIR)$(APP_NAME).out -a $(ADDR)
-	@cd ../../
+# monitor
+monitor:
+	@python $(ESPTOOL)idf_monitor.py --port /dev/$(FLASH_PORT) --baud $(SERIAL_BAUD) $(OUT_DIR)$(APP_NAME).out
 
 # Không cần quan tâm
-.PHONY: all clean flash unbrick
+.PHONY: all clean flash unbrick monitor
