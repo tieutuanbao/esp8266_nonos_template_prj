@@ -54,7 +54,6 @@ CFLAGS 		= -Os -g -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions 
 				-fno-builtin-printf
 
 # Linker
-# LD_SCRIPT	= $(SDK_BASE)ld/eagle.app.v6.ld
 LD_SCRIPT	= ld/eagle.app.v6.4M.ld
 LDFLAGS		= -nostdlib -Wl,--no-check-sections -Wl,--gc-sections -u call_user_start -Wl,-static -Wl,--start-group
 
@@ -119,9 +118,10 @@ $(APP_NAME).a: $(patsubst  %.c, %.o, $(SRCS)) $(patsubst  %.S, %.o, $(SRCS))
 clean:
 	rm -rf build
 
+
 # Nạp chương trình
 flash:
-	$(ESPTOOL)esptool -p $(FLASH_PORT) \
+	@python $(ESPTOOL)esptool.py -p $(FLASH_PORT) \
 	--baud $(FLASH_BAUD) \
 	write_flash $(FLASHDEF) \
 	0x00000 $(BIN_DIR)$(APP_NAME)0x00000.bin \
@@ -129,7 +129,7 @@ flash:
 	
 # Un-Brick
 unbrick:
-	$(ESPTOOL)esptool -p $(FLASH_PORT) \
+	@python $(ESPTOOL)esptool.py -p $(FLASH_PORT) \
 	--baud $(FLASH_BAUD) \
 	write_flash --flash_freq 40m --flash_mode qio --flash_size 32m \
 	0x000000 $(SDK_BASE)bin/boot_v1.7.bin \

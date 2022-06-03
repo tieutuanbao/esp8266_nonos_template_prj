@@ -11,7 +11,7 @@
 #ifndef __MAIN_H
 #define __MAIN_H
 
-#include "port.h"
+#include "port_macro.h"
 
 #if ((SPI_FLASH_SIZE_MAP == 0) || (SPI_FLASH_SIZE_MAP == 1))
     #error "The flash map is not supported"

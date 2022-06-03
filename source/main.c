@@ -12,6 +12,7 @@
 #include "eagle_soc.h"
 #include "ets_sys.h"
 #include "user_interface.h"
+#include "port_macro.h"
 
 #include "main.h"
 

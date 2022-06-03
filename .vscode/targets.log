@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Fri Jun  3 10:40:47 2022
+# Make data base, printed on Fri Jun  3 11:40:52 2022
 
 # Variables
 
@@ -26,7 +26,7 @@ IDF_PATH = C:\msys32\home\Admin\esp\ESP8266_RTOS_SDK
 # environment
 LOCALAPPDATA = C:\Users\Admin\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-c6a91587-7382-4188-bd76-385ae3a6b258-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-85f68f8a-5e21-46de-b4a0-780b6ba42e63-sock
 # environment
 VSCODE_CWD = F:\2.documents\esp\8266\esp8266_nonos_template_prj
 # environment
@@ -43,6 +43,7 @@ MAKE_COMMAND := make
 CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15056_JEHMWEMPXHSNOCCS
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+ 
 # default
 .VARIABLES := 
 # automatic
@@ -58,17 +59,16 @@ VSCODE_CODE_CACHE_PATH = C:\Users\Admin\AppData\Roaming\Code\CachedData\c3511e6c
 # environment
 LANG = C
 # default
- 
 .LOADED := 
 # environment
 TMP = /c/Users/Admin/AppData/Local/Temp
 # default
 .INCLUDE_DIRS = /usr/include /usr/include
-# makefile (from 'Makefile', line 58)
+# makefile (from 'Makefile', line 57)
 LD_SCRIPT = ld/eagle.app.v6.4M.ld
 # makefile
 MAKEFLAGS = pqrR
-# makefile (from 'Makefile', line 62)
+# makefile (from 'Makefile', line 61)
 SDK_LIBS := -LESP8266_NONOS_SDK/lib -Tld/eagle.app.v6.4M.ld -nostdlib -Wl,--no-check-sections -Wl,--gc-sections -u call_user_start -Wl,-static -Wl,--start-group -lc -lgcc -lhal -lphy -lpp -lnet80211 -llwip -lwpa -lcrypto -lmain -ljson -lssl -lupgrade -lsmartconfig -lairkiss
 # environment
 ONEDRIVE = C:\Users\Admin\OneDrive
@@ -91,6 +91,7 @@ MFLAGS = -pqrR
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # automatic
+ 
 +D = $(patsubst %/,%,$(dir $+))
 # environment
 IDF_TOOLS_PATH = C:\Espressif\xtensa-lx106-elf\bin
@@ -131,7 +132,6 @@ MAKECMDGOALS := all
 # environment
 DRIVERDATA = C:\Windows\System32\Drivers\DriverData
 # environment
- 
 COMSPEC = C:\WINDOWS\system32\cmd.exe
 # environment
 WINDIR = C:\WINDOWS
@@ -145,6 +145,7 @@ MAKE = $(MAKE_COMMAND)
 PATH = /c/Python27:/c/Python27/Scripts:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/dotnet:/c/Program Files (x86)/php:/c/composer:/c/Program Files/Git/cmd:/c/Users/Admin/AppData/Local/Microsoft/WindowsApps:/c/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin:/c/Program Files (x86)/Nmap:/c/WINDOWS/system32:/c/Program Files/SDCC/bin:/c/Program Files/CMake/bin:/c/Users/Admin/.dotnet/tools:/c/Users/Admin/AppData/Roaming/Composer/vendor/bin:/mingw64/bin:/usr/bin:/c/Espressif/xtensa-lx106-elf/bin
 # environment
 ZES_ENABLE_SYSMAN = 1
+ 
 # environment
 COMPUTERNAME = DESKTOP-OL0EKIL
 # default
@@ -179,7 +180,6 @@ ESPTOOL = tools/
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # automatic
 +F = $(notdir $+)
- 
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -198,7 +198,7 @@ FLASH_PORT := COM4
 MAKE_VERSION := 4.3
 # environment
 PROGRAMFILES(X86) = C:\Program Files (x86)
-# makefile (from 'Makefile', line 59)
+# makefile (from 'Makefile', line 58)
 LDFLAGS = -nostdlib -Wl,--no-check-sections -Wl,--gc-sections -u call_user_start -Wl,-static -Wl,--start-group
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-OL0EKIL
@@ -211,6 +211,7 @@ PUBLIC = C:\Users\Public
 # makefile (from 'Makefile', line 47)
 OBJS_DIR := build/obj/
 # environment
+ 
 APPDATA = C:\Users\Admin\AppData\Roaming
 # makefile (from 'Makefile', line 52)
 CFLAGS = -Os -g -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals -ffunction-sections -fdata-sections -fno-builtin-printf
@@ -274,15 +275,15 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 
 # Directories
 
-# . (device 1177227544, inode 36310271995683911): 17 files, no impossibilities.
+# . (device 1177227544, inode 36310271995683911): 16 files, no impossibilities.
 # source (device 1177227544, inode 2251799813696992): No files, no impossibilities so far.
 
-# 17 files, no impossibilities in 2 directories.
+# 16 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 %.o: %.c
-#  recipe to execute (from 'Makefile', line 112):
+#  recipe to execute (from 'Makefile', line 111):
 	@mkdir -p $(OBJS_DIR)
 	@mkdir -p $(BIN_DIR)
 	@mkdir -p $(OUT_DIR)
@@ -295,9 +296,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
 # Not a target:
 mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.o:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 template_project.out: template_project.a
 #  Implicit rule search has not been done.
@@ -306,7 +307,7 @@ template_project.out: template_project.a
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/11=0%
-#  recipe to execute (from 'Makefile', line 104):
+#  recipe to execute (from 'Makefile', line 103):
 	$(LD) $(SDK_LIBS) $(OUT_DIR)$< -Wl,--end-group -o $(OUT_DIR)$@
 
 # Not a target:
@@ -321,7 +322,7 @@ unbrick:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 132):
+#  recipe to execute (from 'Makefile', line 131):
 	$(ESPTOOL)esptool -p $(FLASH_PORT) \
 	--baud $(FLASH_BAUD) \
 	write_flash --flash_freq 40m --flash_mode qio --flash_size 32m \
@@ -334,7 +335,7 @@ unbrick:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-03 10:39:05.640963
+#  Last modified 2022-06-03 11:34:26.2710642
 #  File has been updated.
 #  Successfully updated.
 
@@ -343,7 +344,7 @@ flash:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 124):
+#  recipe to execute (from 'Makefile', line 123):
 	$(ESPTOOL)esptool -p $(FLASH_PORT) \
 	--baud $(FLASH_BAUD) \
 	write_flash $(FLASHDEF) \
@@ -353,10 +354,11 @@ flash:
 
 clean:
 #  Phony target (prerequisite of .PHONY).
+ 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 120):
+#  recipe to execute (from 'Makefile', line 119):
 	rm -rf build
 
 # Not a target:
@@ -365,7 +367,6 @@ source/main.c:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 # Not a target:
 mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.c:
 #  Implicit rule search has not been done.
@@ -395,8 +396,9 @@ source/rf_init.o: source/rf_init.c
 # automatic
 # | := 
 # variable set hash-table stats:
+ 
 # Load=8/32=25%, Rehash=0, Collisions=10/21=48%
-#  recipe to execute (from 'Makefile', line 112):
+#  recipe to execute (from 'Makefile', line 111):
 	@mkdir -p $(OBJS_DIR)
 	@mkdir -p $(BIN_DIR)
 	@mkdir -p $(OUT_DIR)
@@ -426,7 +428,7 @@ template_project.bin: template_project.out
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/11=0%
-#  recipe to execute (from 'Makefile', line 85):
+#  recipe to execute (from 'Makefile', line 84):
 	@echo ".bin to .out!"
 	$(OBJCOPY) --only-section .text -O binary $(OUT_DIR)$< eagle.app.v6.text.bin
 	$(OBJCOPY) --only-section .data -O binary $(OUT_DIR)$< eagle.app.v6.data.bin
@@ -434,6 +436,7 @@ template_project.bin: template_project.out
 	$(OBJCOPY) --only-section .irom0.text -O binary $(OUT_DIR)$< eagle.app.v6.irom0text.bin
 	$(ESPTOOL)gen_appbin $(OUT_DIR)$< 0 0 15 4 0
 	@mv eagle.app.* $(BIN_DIR)
+ 
 	@mv $(BIN_DIR)eagle.app.flash.bin $(BIN_DIR)$(APP_NAME)0x00000.bin
 	@mv $(BIN_DIR)eagle.app.v6.irom0text.bin $(BIN_DIR)$(APP_NAME)0x10000.bin
 	@echo "Generate $(APP_NAME)*.bin successully in folder $(BIN_DIR)."
@@ -446,7 +449,7 @@ monitor:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 143):
+#  recipe to execute (from 'Makefile', line 142):
 	@python $(ESPTOOL)idf_monitor.py --port /dev/$(FLASH_PORT) --baud $(SERIAL_BAUD) $(OUT_DIR)$(APP_NAME).out
 
 # Not a target:
@@ -461,17 +464,17 @@ source/main.o:
 #  File has not been updated.
 
 template_project.a: source/rf_init.o source/main.o mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.o source/rf_init.c source/main.c mcu_libs_BitsCat/arch/tensilica/l106/esp8266/driver/esp8266_gpio.c
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/11=0%
-#  recipe to execute (from 'Makefile', line 108):
+#  recipe to execute (from 'Makefile', line 107):
 	$(AR) ru $(OUT_DIR)$@ $(wildcard $(OBJS_DIR)*.o)
 
 # files hash-table stats:
+ 
 # Load=18/1024=2%, Rehash=0, Collisions=2/49=4%
 # VPATH Search Paths
 
@@ -479,12 +482,12 @@ template_project.a: source/rf_init.o source/main.o mcu_libs_BitsCat/arch/tensili
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 504 B / avg = 13 B
-# current buf: size = 8162 B / used = 504 B / count = 38 / avg = 13 B
+# strcache buffers: 1 (0) / strings = 37 / storage = 498 B / avg = 13 B
+# current buf: size = 8162 B / used = 498 B / count = 37 / avg = 13 B
 
-# strcache performance: lookups = 63 / hit rate = 39%
+# strcache performance: lookups = 62 / hit rate = 40%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=1/63=2%
-# Finished Make data base on Fri Jun  3 10:40:47 2022
+# Load=37/8192=0%, Rehash=0, Collisions=1/62=2%
+# Finished Make data base on Fri Jun  3 11:40:52 2022
 
  
