@@ -2,20 +2,30 @@
 #
 # File	: gen_appbin.py
 # This file is part of Espressif's generate bin script.
-# Copyright (C) 2013 - 2016, Espressif Systems
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of version 3 of the GNU General Public License as
-# published by the Free Software Foundation.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License along
-# with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+# 
+# ESPRESSIF MIT License
+# 
+# Copyright (c) 2016 <ESPRESSIF SYSTEMS (SHANGHAI) PTE LTD>
+# 
+# Permission is hereby granted for use on ESPRESSIF SYSTEMS ESP8266 only, in which case,
+# it is free of charge, to any person obtaining a copy of this software and associated
+# documentation files (the "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the Software is furnished
+# to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in all copies or
+# substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+# 
+# 
+ 
 """This file is part of Espressif's generate bin script.
     argv[1] is elf file name
     argv[2] is version num"""
@@ -138,8 +148,8 @@ def gen_appbin():
     data_str = ''
     sum_size = 0
 
-    cmd = 'C:\\Espressif\\xtensa-lx106-elf\\bin\\xtensa-lx106-elf-nm -g ' + elf_file + ' > eagle.app.sym'
-
+    cmd = 'xtensa-lx106-elf-nm -g ' + elf_file + ' > eagle.app.sym'
+    
     os.system(cmd)
 
     fp = file('./eagle.app.sym')
@@ -266,7 +276,7 @@ def gen_appbin():
             all_bin_crc = abs(all_bin_crc) + 1
         print all_bin_crc
         write_file(flash_bin_name,chr((all_bin_crc & 0x000000FF))+chr((all_bin_crc & 0x0000FF00) >> 8)+chr((all_bin_crc & 0x00FF0000) >> 16)+chr((all_bin_crc & 0xFF000000) >> 24))
-    cmd = 'del eagle.app.sym'
+    cmd = 'rm eagle.app.sym'
     os.system(cmd)
 
 if __name__=='__main__':

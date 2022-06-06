@@ -1,6 +1,6 @@
-
 #include "ets_sys.h"
 #include "osapi.h"
+#include "eagle_soc.h"
 #include "mem.h"
 #include "user_interface.h"
 #include "main.h"
@@ -34,10 +34,7 @@ static os_event_t s_loop_queue[LOOP_QUEUE_SIZE];
 void ICACHE_FLASH_ATTR loop(os_event_t *events);
 void ICACHE_FLASH_ATTR setup();
 
-void ICACHE_FLASH_ATTR __disableWiFiAtBootTime (void)
-{
-    // Starting from arduino core v3: wifi is disabled at boot time
-    // WiFi.begin() or WiFi.softAP() will wake WiFi up
+void ICACHE_FLASH_ATTR __disableWiFiAtBootTime (void) {
     wifi_set_opmode_current(0/*WIFI_OFF*/);
     wifi_fpm_set_sleep_type(MODEM_SLEEP_T);
     wifi_fpm_open();
@@ -66,10 +63,10 @@ void ICACHE_FLASH_ATTR user_init(void)
 				rtc_info->epc1, rtc_info->epc2, rtc_info->epc3, rtc_info->excvaddr, rtc_info->depc);
 	}
 
-    uart_div_modify(0, UART_CLK_FREQ / 115200);
     system_update_cpu_freq(SYS_CPU_160MHZ);
+    uart_div_modify(0, UART_CLK_FREQ / 115200);
 
-    // __disableWiFiAtBootTime();
+    __disableWiFiAtBootTime();
     /* Khởi tạo task */
     system_os_task(loop,
         LOOP_TASK_PRIORITY, s_loop_queue,

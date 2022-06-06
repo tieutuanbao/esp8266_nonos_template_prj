@@ -1,17 +1,6 @@
-/**
- * @file main.h
- * @author Tieu Tuan Bao (tieutuanbao@gmail.com)
- * @brief 
- * @version 0.1
- * @date 2022-01-30
- * 
- * @copyright Copyright (c) 2022
- * 
- */
 #ifndef __MAIN_H
 #define __MAIN_H
 
-#include "port_macro.h"
 
 #if ((SPI_FLASH_SIZE_MAP == 0) || (SPI_FLASH_SIZE_MAP == 1))
     #error "The flash map is not supported"
@@ -48,5 +37,34 @@
 #else
 #error "The flash map is not supported"
 #endif
+
+
+#include "common_macros.h"
+#include "color.h"
+
+/* ------------ Define 1903 ------------ */
+#define GPIO_1903_PORT_SET    (GPIO->out_set)
+#define GPIO_1903_PORT_CLR    (GPIO->out_clear)
+
+#define GPIO_1903_DI_CH0        12
+#define GPIO_1903_DI_CH1        13
+#define GPIO_1903_DI_CH2        14
+#define GPIO_1903_DI_CH3        15
+
+#define GPIO1903_DI_CH0_BIT_MASK        (1ULL << GPIO_1903_DI_CH0)
+#define GPIO1903_DI_CH1_BIT_MASK        (1ULL << GPIO_1903_DI_CH1)
+#define GPIO1903_DI_CH2_BIT_MASK        (1ULL << GPIO_1903_DI_CH2)
+#define GPIO1903_DI_CH3_BIT_MASK        (1ULL << GPIO_1903_DI_CH3)
+
+#define USC_ALL_MASK    (GPIO1903_DI_CH0_BIT_MASK|GPIO1903_DI_CH1_BIT_MASK|GPIO1903_DI_CH2_BIT_MASK|GPIO1903_DI_CH3_BIT_MASK)
+
+#define CONFIG_HTTPD_MAX_URI_LEN    256
+
+/* Define số cổng - chạy song song */
+#define MAX_CHIP_PARA        4
+/* Define số lượng chip nối tiếp mỗi cổng */
+#define MAX_CHIP_SERI        256
+
+extern uint8_t *color_buf_p;
 
 #endif

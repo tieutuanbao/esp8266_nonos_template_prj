@@ -159,7 +159,7 @@ SECTIONS
     *libcrypto.a:(.literal.* .text.*)
     *libespnow.a:(.literal.* .text.*)
     *libjson.a:(.literal.* .text.*)
-    *liblwip.a:(.literal.* .text.*)
+    *liblwip_gcc.a:(.literal.* .text.*)
     *libnet80211.a:(.literal.* .text.*)
     *libsmartconfig.a:(.literal.* .text.*)
     *libssl.a:(.literal.* .text.*)
@@ -226,4 +226,4 @@ SECTIONS
 }
 
 /* get ROM code address */
-INCLUDE "../ld/eagle.rom.addr.v6.ld"
+INCLUDE "ld/eagle.rom.addr.v6.ld"
